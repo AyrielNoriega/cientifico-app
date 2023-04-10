@@ -2,7 +2,7 @@
 const path = require('path');
 
 //archivo necesario para trabajar con html
-const HtmlWerpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
  //Aquí se encuentra toda la configuración de lo que va a suceder. Modulo para exportar.
@@ -24,12 +24,17 @@ const HtmlWerpackPlugin = require('html-webpack-plugin');
         rules: [
             {
                 //Nos permite identificar los archivos según se encuentran en nuestro entorno.
-                test: /\,js?$/,
+                test: /\.js$/,
                 //Excluimos la carpeta de node modules
                 exclude: /node_modules/,
                 use: {
                     //Utilizar un loader como configuración establecida.
                     loader: 'babel-loader',
+                    // options: {
+                    //     presets: [
+                    //       ['@babel/preset-env', { targets: "defaults" }]
+                    //     ],
+                    //   }
                 }
             }
         ]
@@ -44,6 +49,6 @@ const HtmlWerpackPlugin = require('html-webpack-plugin');
                 //El nombre que tendrá el archivo
                 filename: './index.html'
             }
-        ])
+        ])  
     ]
  }
