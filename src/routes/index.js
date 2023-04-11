@@ -1,5 +1,6 @@
 import {Home, Character} from "../pages"
 import {Header} from "../templates";
+import getHash from "../utils/getHash";
 
 const routes = {
     '/': Home,
