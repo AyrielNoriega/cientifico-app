@@ -40,7 +40,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin([
+        new HtmlWebpackPlugin(
             {
                 //Cómo vamos a inyectar un valor a un archivo HTML.
                 inject: true,
@@ -49,6 +49,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
                 //El nombre que tendrá el archivo
                 filename: './index.html'
             }
-        ])  
+        )  
     ]
  }

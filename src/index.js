@@ -1,7 +1,3 @@
-console.log("hola mudno");
+import router from './routes';
 
-const fancyFunc = () => {
-    return [1, 2];
-  };
-  
-  const [a, b] = fancyFunc();
+window.addEventListener('load', router);
